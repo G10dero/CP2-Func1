@@ -33,11 +33,12 @@ int divide(int x, int y){
 int main(){
 	int num1, num2, choice, result;
     char decision = 'y';
+	do{
+	system("cls");
     cout<<"Enter first value: ";
     cin>>num1;
     cout<<"Enter second value: ";
     cin>>num2;
-    do{
     	system("cls");
     	do{
 			switch (MainMenu()){
@@ -45,22 +46,22 @@ int main(){
 					cout<<"The sum is: "<<add(num1, num2);
 					break;
 		    	case 2:
-		    		cout<<"The sum is: "<<subtract(num1, num2);
+		    		cout<<"The difference is: "<<subtract(num1, num2);
 					break;
 					
 				case 3:
-					cout<<"The sum is: "<<multiply(num1, num2);
+					cout<<"The product is: "<<multiply(num1, num2);
 					break;
 					
 				case 4:
-					cout<<"The sum is: "<<divide(num1, num2);
+					cout<<"The quotient is: "<<divide(num1, num2);
 					break;
 					
 				default:
 					cout<<"Invalid Choice!!\n";
 			}
 		}
-		while (choice < 0 || choice > 5);
+		while (choice < 0 || choice > 4);
 		
 	cout<<"\n\nWould you like to try another operation?\n(Y) Yes\n(N) No\n";
 	cin>>decision;}
